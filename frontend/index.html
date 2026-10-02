@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AI Document Assistant</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="app">
+
+        <!-- Header -->
+        <header class="header">
+
+            <div>
+                <h1>📄 AI Document Assistant</h1>
+                <p>Ask questions about your documents</p>
+            </div>
+
+            <!-- Upload Button -->
+            <div class="upload-area">
+
+                <input
+                    type="file"
+                    id="fileInput"
+                    accept=".pdf"
+                    hidden
+                >
+
+                <button id="uploadButton">
+                    📤 Upload PDF
+                </button>
+
+            </div>
+
+        </header>
+
+
+        <!-- Chat Area -->
+        <main id="chatContainer" class="chat-container">
+            <div class="documents-panel">
+
+    <div class="documents-header">
+        <span>📚 Documents</span>
+        <button id="refreshDocuments">↻</button>
+    </div>
+
+    <div id="documentsList" class="documents-list">
+        Loading documents...
+    </div>
+
+</div>
+
+            <!-- Welcome message -->
+            <div class="message assistant">
+
+                <div class="message-content">
+
+                    Hello! 👋
+                    <br><br>
+
+                    I can answer questions based on the
+                    documents available in the knowledge base.
+
+                </div>
+
+            </div>
+
+        </main>
+
+
+        <!-- Input Area -->
+        <div class="input-area">
+
+            <input
+                type="text"
+                id="questionInput"
+                placeholder="Ask a question..."
+                autocomplete="off"
+            >
+
+            <button id="sendButton">
+                Send
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <script src="app.js"></script>
+
+</body>
+
+</html>
